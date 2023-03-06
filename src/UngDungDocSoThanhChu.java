@@ -58,30 +58,30 @@ public class UngDungDocSoThanhChu {
             }
 
         } else if (12 < so && so < 20) {
-           so=so/10;
+
             switch (so) {
-                case 3:
+                case 13:
                     System.out.println("Thir  "+"teen");
                     break;
-                case 4:
-                    System.out.println("Four  "+"teen)");
+                case 14:
+                    System.out.println("Four  "+"teen");
                     break;
-                case 5:
-                    System.out.println("Five  "+"teen)");
+                case 15:
+                    System.out.println("Five  "+"teen");
                     break;
-                case 6:
-                    System.out.println("Six "+"teen)");
+                case 16:
+                    System.out.println("Six "+"teen");
                     break;
-                case 7:
-                    System.out.println("Seven "+"teen)");
+                case 17:
+                    System.out.println("Seven "+"teen");
                     break;
-                case 8:
-                    System.out.println("Eight "+"teen)");
+                case 18:
+                    System.out.println("Eight "+"teen");
                     break;
-                case 9:
-                    System.out.println("Nine  "+"teen)");
+                case 19:
+                    System.out.println("Nine  "+"teen");
                     break;
-                    
+
         }
 
     }
