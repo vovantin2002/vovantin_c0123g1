@@ -2,7 +2,7 @@ package bai_3;
 
 public class DemSoLanXuatHienCuaKiTuTrongChuoi {
     public static void main(String[] args) {
-        String str = "vovantin";
+        String str = "vo van tin";
         char b = 'v';
         int count = 0;
         for (int i = 0; i < str.length(); i++) {
