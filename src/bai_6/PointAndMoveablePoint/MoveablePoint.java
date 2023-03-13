@@ -20,7 +20,6 @@ public class MoveablePoint extends Point {
     }
 
 
-
     public void setSpeed(float xSpeed, float ySpeed) {
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
@@ -33,6 +32,12 @@ public class MoveablePoint extends Point {
         return arr;
     }
 
+    public MoveablePoint move() {
+        x += xSpeed;
+        y += ySpeed;
+        return this;
+    }
+
     @Override
     public String toString() {
         return "MoveablePoint{" +
@@ -43,10 +48,5 @@ public class MoveablePoint extends Point {
                 '}';
     }
 
-    public MoveablePoint move() {
-        x += xSpeed;
-        y += ySpeed;
-        return this;
-    }
 
 }
