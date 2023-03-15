@@ -1,4 +1,4 @@
-package bai_6.PointAndMoveablePoint;
+package bai_6.point_and_moveable_point;
 
 
 public class MoveablePoint extends Point {

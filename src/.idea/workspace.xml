@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="84833abf-ad87-44e0-b774-990f9436fbf2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/bai_6/circle_and_cylinder/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_6/circle_and_cylinder/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_6/circle_and_cylinder/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_6/circle_and_cylinder/Cylinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_6/circle_and_cylinder/TestCircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_6/circle_and_cylinder/TestCircle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_6/circle_and_cylinder/TestCylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_6/circle_and_cylinder/TestCylinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_6/point2d_and_point3d/Point2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_6/point2d_and_point3d/Point2D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_6/point2d_and_point3d/Point3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_6/point2d_and_point3d/Point3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_6/point2d_and_point3d/Test2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_6/point2d_and_point3d/Test2D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_6/point2d_and_point3d/Test3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_6/point2d_and_point3d/Test3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_6/point_and_moveable_point/MoveablePoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_6/point_and_moveable_point/MoveablePoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_6/point_and_moveable_point/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_6/point_and_moveable_point/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_6/point_and_moveable_point/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_6/point_and_moveable_point/Test.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2N27NQ1EjIsWssyDcKayFbMrpz6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Codegym/vovantin_c0123g1_module_2"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="84833abf-ad87-44e0-b774-990f9436fbf2" name="Changes" comment="" />
+      <created>1678850283947</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678850283947</updated>
+      <workItem from="1678850290680" duration="52000" />
+      <workItem from="1678850411643" duration="118000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

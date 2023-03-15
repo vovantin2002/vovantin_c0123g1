@@ -1,4 +1,4 @@
-package bai_6.Point2DAndPoint3D;
+package bai_6.point2d_and_point3d;
 
 public class Point2D {
     protected float x = 0;

@@ -1,4 +1,4 @@
-package bai_6.CircleAndCylinder;
+package bai_6.circle_and_cylinder;
 
 import java.util.Scanner;
 
