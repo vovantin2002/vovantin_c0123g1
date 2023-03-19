@@ -14,11 +14,11 @@ public class Menu {
         boolean check;
         do {
             check = true;
-            System.out.println("Trung tâm đào đào tạo gồm có " +
-                    "\n1. Học viên" +
-                    "\n2. Giảng viên" +
-                    "\n3. Hết việc làm");
-            System.out.println("Nếu bạn là học viên hay giảng viên  thì ấn phím 1 hoặc 2 muốn thoát thì phím 3");
+            System.out.println("Cong Ty:  " +
+                    "\n1. Hoc vien" +
+                    "\n2. Giang vien" +
+                    "\n3. Khac ");
+            System.out.println("Neu thuoc la hoc vien thi chon 1, giang vien thi chon 2, con lai chon 3 ");
             int select = Integer.parseInt(sc.nextLine());
             switch (select) {
                 case 1:
@@ -39,24 +39,23 @@ public class Menu {
         boolean check;
         do {
             check = true;
-            System.out.println("Danh sách quản lí hồ sơ học viên gồm có " +
-                    "\n1. Thêm mới  học viên" +
-                    "\n2. Xoá  học viên" +
-                    "\n3. Xem danh sách học viên" +
-                    "\n4. Hết việc làm");
-            System.out.println("Hãy chọn các mục trên đây để làm việc");
-            System.out.println("Chọn chức năng");
+            System.out.println("Danh sach quan ly hoc vien" +
+                    "\n1. Them moi hoc vien" +
+                    "\n2. Xoa hoc vien" +
+                    "\n3. Hien thi danh sach" +
+                    "\n4. Khac");
+            System.out.println("Nhap lua chon");
             int chooss = Integer.parseInt(sc.nextLine());
             switch (chooss) {
                 case 1:
-                    System.out.println("Hãy nhập các chức năng sau đây");
+                    System.out.println("nhap cac chuc nang ");
                     studentIml.add();
                     break;
                 case 2:
                     studentIml.detele();
                     break;
                 case 3:
-                    System.out.println("Hiển thị danh sách học viên");
+                    System.out.println("Hien thi danh sach hv ");
                     studentIml.display();
                     break;
                 case 4:
@@ -70,24 +69,23 @@ public class Menu {
         boolean check;
         do {
             check = true;
-            System.out.println("Danh sách quản lí hồ sơ giảng viên gồm" +
-                    "\n1. Thêm mới  giảng viên" +
-                    "\n2. Xoá  giảng viên" +
-                    "\n3. Xem danh sách giảng viên" +
-                    "\n4. Hết việc làm");
-            System.out.println("Hãy chọn các mục trên đây để làm việc");
-            System.out.println("Chọn chức năng");
+            System.out.println("Danh sach quan ly giang vien " +
+                    "\n1. Them moi gv " +
+                    "\n2. Xoa gv " +
+                    "\n3. Hien thi danh sach " +
+                    "\n4. Khac ");
+            System.out.println("Nhap lua chon ");
             int chooss = Integer.parseInt(sc.nextLine());
             switch (chooss) {
                 case 1:
-                    System.out.println("Hãy nhập các chức năng sau đây");
+                    System.out.println("Nhap chuc nang ");
                     intructorIml.add();
                     break;
                 case 2:
                     intructorIml.detele();
                     break;
                 case 3:
-                    System.out.println("Hiển thị danh sách giảng viên");
+                    System.out.println("Hien thi danh sach ");
                     intructorIml.display();
                     break;
                 case 4:

@@ -4,7 +4,7 @@ public class IntructorIml implements IManagement {
     static ArrayList<Intructor> intructors = new ArrayList<>();
 
     static {
-        intructors.add(new Intructor(1, "09", "nam", "Hí Anh", "Intructor"));
+        intructors.add(new Intructor(1, "01", "nu", "Be Dep", "Intructor"));
     }
 
     static Scanner sc = new Scanner(System.in);
@@ -12,12 +12,12 @@ public class IntructorIml implements IManagement {
 
     @Override
     public void add() {
-        System.out.println("NHập mã giảng viên");
+        System.out.println("Nhap ma gv");
         int code = Integer.parseInt(sc.nextLine());
         int count = 0;
         for (int i = 0; i < intructors.size(); i++) {
             if (code == intructors.get(i).getCode()) {
-                System.out.println("mã trùng rồi mời quay lại chức năng");
+                System.out.println("ma nay da ton tai ");
                 return;
             } else {
                 count++;
@@ -25,13 +25,13 @@ public class IntructorIml implements IManagement {
         }
         if (count == intructors.size()) {
         }
-        System.out.println("NHập tên giảng viên");
+        System.out.println("Nhap ten gv");
         String name = sc.nextLine();
-        System.out.println("NHập ngày sinh giảng viên");
+        System.out.println("Nhap ngay sinh gv");
         String birday = sc.nextLine();
-        System.out.println("NHập giới tính giảng viên");
+        System.out.println("Nhap gioi tinh gv");
         String gender = sc.nextLine();
-        System.out.println("NHập Chuyên môn giảng viên");
+        System.out.println("Nhap vi tri cong viec cua gv ");
         String specialize = sc.nextLine();
         Intructor intructor = new Intructor(code, name, birday, gender, specialize);
         intructors.add(intructor);
@@ -43,32 +43,32 @@ public class IntructorIml implements IManagement {
 
     @Override
     public void detele() {
-        System.out.println("nhập mã giảng viên cần xoá :");
+        System.out.println("Nhap ma gv muon xoa :");
         Scanner sc = new Scanner(System.in);
         int code = Integer.parseInt(sc.nextLine());
         for (int i = 0; i < intructors.size(); i++) {
             if (intructors.get(i).getCode() == code) {
-                System.out.println("Bạn có muốn xoá  Mã  " + code + " này ko  " +
-                        "\n 1. Có" +
-                        "\n 2. Không");
-                System.out.println("Chọn chức năng");
+                System.out.println("Ban muon xoa ma  " + code + " nay khong  " +
+                        "\n 1. Co " +
+                        "\n 2. Khong ");
+                System.out.println("Chon chuc nang ");
                 int choss = Integer.parseInt(sc.nextLine());
                 switch (choss) {
                     case 1:
                         intructors.remove(intructors.get(i));
-                        System.out.println("Bạn xoá thành công");
+                        System.out.println("Xoa thanh cong ");
                         break;
                     case 2:
-                        System.out.println("Bạn đã không xoá");
+                        System.out.println("Ban khong xoa ");
                 }
                 return;
             }
         }
-        System.out.println("không tìm thấy mã giảng viên");
+        System.out.println("Khong tim thay ma gv ");
     }
 
     public void display() {
-        System.out.println("Hiển thị danh sách:");
+        System.out.println("Hien thi danh sach:");
         for (Intructor i : intructors) {
             System.out.println(i);
         }

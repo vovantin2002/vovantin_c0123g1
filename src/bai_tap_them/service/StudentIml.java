@@ -6,7 +6,7 @@ public class StudentIml implements IManagement {
     static ArrayList<Student> students = new ArrayList<>();
 
     static {
-        students.add(new Student(1, "0908", "nam", "Định", "CO123G1", 7));
+        students.add(new Student(1, "01234", "nam", "Vo Van Tin", "CO123G1", 7));
 
     }
 
@@ -15,12 +15,12 @@ public class StudentIml implements IManagement {
     @Override
     public void add() {
 
-        System.out.println("NHập mã");
+        System.out.println("Nhap ma hoc vien ");
         int code = Integer.parseInt(sc.nextLine());
         int count = 0;
         for (int i = 0; i < students.size(); i++) {
             if (code == students.get(i).getCode()) {
-                System.out.println("mã học viên có rồi");
+                System.out.println("Ma da ton tai ");
                 return;
             } else {
                 count++;
@@ -28,15 +28,15 @@ public class StudentIml implements IManagement {
         }
         if (count == students.size()) {
         }
-        System.out.println("NHập tên học viên");
+        System.out.println("Nhap ten ");
         String name = sc.nextLine();
-        System.out.println("NHập ngày sinh học viên");
+        System.out.println("Nhap ngay sinh ");
         String birday = sc.nextLine();
-        System.out.println("NHập giới tính học viên");
+        System.out.println("Nhap gioi tinh  ");
         String gender = sc.nextLine();
-        System.out.println("NHập lớp học học viên");
+        System.out.println("Nhap lop  ");
         String classs = sc.nextLine();
-        System.out.println("NHập nhập điểm học viên");
+        System.out.println("Nhap diem  ");
         double ponit = Double.parseDouble(sc.nextLine());
         Student student = new Student(code, name, birday, gender, classs, (int) ponit);
         students.add(student);
@@ -49,32 +49,32 @@ public class StudentIml implements IManagement {
 
     @Override
     public void detele() {
-        System.out.println("nhập mã cần xoá :");
+        System.out.println("Nhap ma muon xoa :");
         Scanner sc = new Scanner(System.in);
         int code = Integer.parseInt(sc.nextLine());
         for (int i = 0; i < students.size(); i++) {
             if (students.get(i).getCode() == code) {
-                System.out.println("Bạn có muốn xoá  Mã  " + code + " này ko  " +
-                        "\n 1. Có" +
-                        "\n 2. Không");
-                System.out.println("Chọn chức năng");
+                System.out.println("Ban co muon xoa ma:  " + code + " nay khong  " +
+                        "\n 1. Co " +
+                        "\n 2. Khong ");
+                System.out.println("Chon chuc nang ");
                 int choss = Integer.parseInt(sc.nextLine());
                 switch (choss) {
                     case 1:
                         students.remove(students.get(i));
-                        System.out.println("Bạn xoá thành công");
+                        System.out.println("Ban xoa thanh cong ");
                         break;
                     case 2:
-                        System.out.println("Bạn đã không xoá");
+                        System.out.println("Ban khong xoa ");
                 }
                 return;
             }
         }
-        System.out.println("không tìm thấy mã học viên");
+        System.out.println("Khong tim thay ma hoc vien ");
     }
 
     public void display() {
-        System.out.println("Hiển thị danh sách:");
+        System.out.println("Hien thi danh sach: ");
         for (Student s : students) {
             System.out.println(s);
         }
