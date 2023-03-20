@@ -1,20 +1,37 @@
 package bai_11;
 
-import java.util.HashSet;
+
+import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
+
 
 public class DemSoLanXuatHienMoiTu {
     public static void main(String[] args) {
-        HashSet<String> chuoi = new HashSet<String>();
-        Scanner sc=new Scanner(System.in);
-        System.out.println("nhap vao chuoi ki tu: ");
-        String a=sc.nextLine();
-        String[] arr = new String[Integer.parseInt(a)];
-        System.out.println(a);
-        for (int i = 0; i <arr.length ; i++) {
-            chuoi.add(arr[i]);
-        }
-        System.out.println(chuoi);
-    }
 
+        Scanner sc = new Scanner(System.in);
+        System.out.println("nhap vao chuoi ki tu: ");
+        String a = sc.nextLine();
+        String uppercaseString = a.toUpperCase();
+        System.out.println("chuoi da nhap sau khi chuyen thanh chu hoa: ");
+        System.out.println(uppercaseString);
+        String[] words = uppercaseString.split(" ");
+        TreeMap<String, Integer> map = new TreeMap<>();
+        for (String word : words) {
+            if (map.containsKey(word)) {
+                map.put(word, map.get(word) + 1);
+            } else {
+                map.put(word, 1);
+            }
+        }
+
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+    }
 }
+
+
+
+
+
