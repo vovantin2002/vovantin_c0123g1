@@ -26,7 +26,7 @@ public class Management {
         for (Product product : productList) {
             if (product.getId() == id) {
                 product.setName(name);
-                product.setPrice((int) price);
+                product.setPrice(price);
                 product.setQuantity(quantity);
             }
         }
