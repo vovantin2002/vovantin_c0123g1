@@ -1,4 +1,8 @@
-package baitapthem1;
+package baitapthem1.view;
+
+import baitapthem1.model.Person;
+import baitapthem1.model.Teacher;
+import baitapthem1.model.Student;
 
 import java.util.ArrayList;
 import java.util.Scanner;
