@@ -1,4 +1,6 @@
-package bai_12;
+package bai_12.controller;
+
+import bai_12.model.Product;
 
 import java.util.ArrayList;
 import java.util.Collections;

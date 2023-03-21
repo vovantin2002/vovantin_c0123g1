@@ -1,4 +1,7 @@
-package bai_12;
+package bai_12.view;
+
+import bai_12.controller.Management;
+import bai_12.model.Product;
 
 import java.util.Scanner;
 

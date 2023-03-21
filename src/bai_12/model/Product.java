@@ -1,4 +1,4 @@
-package bai_12;
+package bai_12.model;
 
 public class Product {
     private int id;
