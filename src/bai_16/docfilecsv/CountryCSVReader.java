@@ -1,25 +1,32 @@
-package bai_16.đọcfilecsv;
+package bai_16.docfilecsv;
 
+import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.List;
 
 public class CountryCSVReader {
+    public static void main(String[] args) {
+        String csvFile = "src\\bai_16\\docfilecsv\\text.txt";
+        BufferedReader br = null;
+        String line = "";
+        String cvsSplitBy = ",";
 
-
-    public static void main(String[] args) throws IOException {
-        String filePath = "src\\bai_16\\đọcfilecsv\\text.txt";
-
-        try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
-            List<String[]> rows = reader.readAll();
-
-            for (String[] row : rows) {
-                int id = Integer.parseInt(row[0]);
-                String code = row[1];
-                String name = row[2];
-                System.out.println(id + " - " + code + " - " + name);
+        try {
+            br = new BufferedReader(new FileReader(csvFile));
+            while ((line = br.readLine()) != null) {
+                String[] country = line.split(cvsSplitBy);
+                System.out.println("ID: " + country[0] + ", Code: " + country[1] + ", Name: " + country[2]);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (br != null) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
 }
-
