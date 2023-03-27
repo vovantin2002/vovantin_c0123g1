@@ -1,4 +1,4 @@
-package bai_16.copyfiletext;
+package bai_16.copy_file_text;
 
 
 import java.io.*;
@@ -19,7 +19,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        try (Writer writer = new FileWriter("src\\bai_16\\copyfiletext\\text.txt");
+        try (Writer writer = new FileWriter("src\\bai_16\\copyfiletext\\text.csv");
              BufferedWriter bufferedWriter = new BufferedWriter(writer)) {
 
             bufferedWriter.write("vo van tin");

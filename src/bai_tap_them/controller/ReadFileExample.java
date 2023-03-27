@@ -1,4 +1,7 @@
-//package bai_tap_them.controller;
+package bai_tap_them.controller;//package bai_tap_them.controller;
+
+import java.io.*;
+
 //
 //import bai_tap_them.service.StudentIml;
 //
@@ -95,3 +98,60 @@
 //        } while (check);
 //    }
 //}
+/*                                     --------------------------------------------------------------------------------------------*/
+//import java.io.BufferedReader;
+//import java.io.File;
+//import java.io.FileReader;
+//
+//public class ReadFileExample {
+//    public static void main(String[] args) {
+//        try {
+//            File file = new File("src\\bai_tap_them\\text.csv"); // Đường dẫn đến file cần đọc
+//
+//            BufferedReader br = new BufferedReader(new FileReader(file));
+//
+//            String line;
+//            while ((line = br.readLine()) != null) {
+//                System.out.println(line); // In ra màn hình từng dòng của file
+//            }
+//
+//            br.close();
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+//}
+public  class ReadFileExample{
+//    public static void main(String[] args) {
+//        try {        File file = new File("src\\bai_tap_them\\text.csv");
+//
+//            BufferedReader br = new BufferedReader(new FileReader(file) ) ;
+//            String line;
+//            while((line=br.readLine())!=null){
+//                System.out.println(line);
+//            }br.close();
+//        } catch (FileNotFoundException e) {
+//            throw new RuntimeException(e);
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//
+//    }
+public static void main(String[] args) {
+    try {
+        File file = new File("src\\bai_tap_them\\text.csv"); // Đường dẫn đến file cần ghi
+
+        FileWriter fw = new FileWriter(file);
+        BufferedWriter bw = new BufferedWriter(fw);
+
+        bw.write("vo van tin cute"); // Ghi dữ liệu vào file
+
+        bw.close();
+        fw.close();
+
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+}

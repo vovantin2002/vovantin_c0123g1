@@ -6,7 +6,7 @@
 //
 //public class CopyFileText {
 //    static final String PATH1 = "src\\bai_16\\copyfiletext\\test.txt";
-//    static final String PATH2 = "src\\bai_16\\copyfiletext\\text.txt";
+//    static final String PATH2 = "src\\bai_16\\copyfiletext\\text.csv";
 //
 //    public static void main(String[] args) {
 //        writeToFileTarget(readToFileSource(), true);

@@ -1,4 +1,4 @@
-package bai_16.docfilecsv;
+package bai_16.doc_file_csv;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class CountryCSVReader {
     public static void main(String[] args) {
-        String csvFile = "src\\bai_16\\docfilecsv\\text.txt";
+        String csvFile = "src\\bai_16\\doc_file_csv\\text.csv";
         BufferedReader br = null;
         String line = "";
         String cvsSplitBy = ",";
