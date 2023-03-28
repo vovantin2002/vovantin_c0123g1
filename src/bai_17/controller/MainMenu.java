@@ -14,17 +14,11 @@ public class MainMenu {
     static Scanner sc = new Scanner(System.in);
 
 
-
-
-
-
-
-
     public static void display() {
         Product[] products = new Product[0];
         for (Product p : products) {
             System.out.println(p.getId() + " - " + p.getName() + " - " + p.getPrice() +
-                    " - " + p.getQuantity() + " - " + p.getDescribe() );
+                    " - " + p.getQuantity() + " - " + p.getDescribe());
         }
     }
 

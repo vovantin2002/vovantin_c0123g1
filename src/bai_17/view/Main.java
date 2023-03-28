@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Main {
 
     private static Scanner sc = new Scanner(System.in);
-   private static List<Product > productList= new ArrayList<>();
+    private static List<Product> productList = new ArrayList<>();
 
 
     public static void main(String[] args) {
@@ -77,7 +77,7 @@ public class Main {
         System.out.print("nhap ten san pham can tim kiem: ");
         String name = sc.nextLine();
         for (Product product : productList) {
-            if (product.getName().contains(name)){
+            if (product.getName().contains(name)) {
                 System.out.printf("%-10s%-20s%-15s%-15s%-30s\n", "ID", "Name", "Price", "Quantity", "Describe");
                 System.out.printf("%-10d%-20s%-15.2f%-15d%-30s\n",
                         product.getId(), product.getName(), product.getPrice(), product.getQuantity(), product.getDescribe());

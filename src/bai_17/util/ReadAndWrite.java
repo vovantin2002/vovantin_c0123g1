@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadAndWrite {
-//    public static void writeStringToFile(String pathfile,String text,boolean append){
+    //    public static void writeStringToFile(String pathfile,String text,boolean append){
 //        File file=new File(pathfile);
 //        FileWriter fileWriter=null;
 //        BufferedWriter bufferedWriter=null;
@@ -44,22 +44,22 @@ public class ReadAndWrite {
 //        }
 //        return productList;
 //    }
-public static void writeStringToFile(String pathFile, List<Product> productList) {
-    File file = new File(pathFile);
-    FileOutputStream fileOutputStream = null;
-    ObjectOutputStream objectOutputStream = null;
-    try {
-        fileOutputStream = new FileOutputStream(file);
-        objectOutputStream = new ObjectOutputStream(fileOutputStream);
-        objectOutputStream.writeObject(productList);
-        fileOutputStream.close();
-        objectOutputStream.close();
-    } catch (FileNotFoundException e) {
-        throw new RuntimeException(e);
-    } catch (IOException e) {
-        throw new RuntimeException(e);
+    public static void writeStringToFile(String pathFile, List<Product> productList) {
+        File file = new File(pathFile);
+        FileOutputStream fileOutputStream = null;
+        ObjectOutputStream objectOutputStream = null;
+        try {
+            fileOutputStream = new FileOutputStream(file);
+            objectOutputStream = new ObjectOutputStream(fileOutputStream);
+            objectOutputStream.writeObject(productList);
+            fileOutputStream.close();
+            objectOutputStream.close();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
-}
 
     public static List<Product> readFileToListString(String pathFile) {
         List<Product> productList = new ArrayList<>();
