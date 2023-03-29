@@ -1,4 +1,4 @@
-package bai_17.model;
+package bai_17.models;
 
 import java.util.Scanner;
 

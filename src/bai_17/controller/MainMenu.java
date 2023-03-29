@@ -1,12 +1,9 @@
 package bai_17.controller;
 
-import bai_17.model.Product;
+import bai_17.models.Product;
 import bai_17.service.ProductService;
 
 import java.util.Scanner;
-
-import static bai_17.model.Product.add;
-import static bai_17.model.Product.search;
 
 public class MainMenu {
 

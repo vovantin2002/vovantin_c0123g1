@@ -1,6 +1,7 @@
 package bai_17.repository;
 
-import bai_17.model.Product;
+import bai_17.models.Product;
+import bai_17.models.Product;
 
 import java.util.List;
 
