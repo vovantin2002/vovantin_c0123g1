@@ -1,2 +1,4 @@
-package case_study_module2.repository;public interface IRepositoryCustomer {
+package case_study_module2.repository;
+
+public interface IRepositoryCustomer {
 }

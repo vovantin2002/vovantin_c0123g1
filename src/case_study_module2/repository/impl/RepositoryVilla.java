@@ -1,2 +1,4 @@
-package case_study_module2.repository.impl;public class RepositoryVilla {
+package case_study_module2.repository.impl;
+
+public class RepositoryVilla {
 }

@@ -1,2 +1,4 @@
-package case_study_module2.model;public class Contract {
+package case_study_module2.model;
+
+public class Contract {
 }
