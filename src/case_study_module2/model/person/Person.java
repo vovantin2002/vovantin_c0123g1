@@ -3,15 +3,21 @@ package case_study_module2.model.person;
 public abstract class Person {
     private String id;
 
-    public Person(String id, String name, String age, String address) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.address = address;
+    private String name;
+    private String gender;
+    private String age;
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", gender='" + gender + '\'' +
+                ", age='" + age + '\'' +
+                ", address='" + address + '\'' +
+                '}';
     }
 
-    private String name;
-    private String age;
     private String address;
 
     public String getId() {
@@ -30,6 +36,14 @@ public abstract class Person {
         this.name = name;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
     public String getAge() {
         return age;
     }
@@ -43,6 +57,14 @@ public abstract class Person {
     }
 
     public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public Person(String id, String name, String gender, String age, String address) {
+        this.id = id;
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
         this.address = address;
     }
 

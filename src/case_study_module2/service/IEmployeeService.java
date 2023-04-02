@@ -1,9 +1,9 @@
 package case_study_module2.service;
 
 public interface IEmployeeService extends IService {
-    void display();
+     void displayEmployee();
 
-    void add();
+     void addEmployee();
 
-    void edit();
+     void editEmployee();
 }

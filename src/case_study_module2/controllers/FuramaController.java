@@ -1,5 +1,12 @@
 package case_study_module2.controllers;
 
+import case_study_module2.model.person.Customer;
+import case_study_module2.repository.IRepositoryEmployee;
+import case_study_module2.service.IEmployeeService;
+import case_study_module2.service.IService;
+import case_study_module2.service.impl.CustomerServiceImpl;
+import case_study_module2.service.impl.EmployeeServiceImpl;
+
 import java.util.Scanner;
 
 import static bai_17.controller.MainMenu.display;
@@ -7,6 +14,8 @@ import static bai_17.models.Product.add;
 import static case_study_module2.service.IService.edit;
 
 public class FuramaController {
+    static EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
+    static CustomerServiceImpl customerService = new CustomerServiceImpl();
     private static boolean check = true;
     private static Scanner sc = new Scanner(System.in);
 
@@ -53,13 +62,13 @@ public class FuramaController {
         System.out.println("4 Return main menu");
             switch (sc.nextInt()) {
                 case 1:
-                    display();
+                    employeeService.displayEmployee();
                     break;
                 case 2:
-                    add();
+                    employeeService.addEmployee();
                     break;
                 case 3:
-                    edit();
+                    employeeService.editEmployee();
                     break;
                 case 4:
                     break;
@@ -69,6 +78,7 @@ public class FuramaController {
 
     }
 
+
     public static void customerMenu() {
         while (check) {
         System.out.println("1 Display list customers");
@@ -77,8 +87,13 @@ public class FuramaController {
         System.out.println("4 Return main menu");
             switch (sc.nextInt()) {
                 case 1:
+                    customerService.display();
+                    break;
                 case 2:
+                    customerService.add();
+                    break;
                 case 3:
+                    customerService.edit();
                 case 4:
             }
         }
