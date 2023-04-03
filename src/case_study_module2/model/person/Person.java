@@ -1,24 +1,26 @@
 package case_study_module2.model.person;
 
 public abstract class Person {
-    private String id;
+    protected String id;
+    protected String name;
+    protected String birthday;
+    protected String gender;
+    protected String identityCard;
+    protected String phoneNumber;
+    protected String email;
 
-    private String name;
-    private String gender;
-    private String age;
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", gender='" + gender + '\'' +
-                ", age='" + age + '\'' +
-                ", address='" + address + '\'' +
-                '}';
+    public Person(String id, String name, String birthday, String gender, String identityCard, String phoneNumber, String email) {
+        this.id = id;
+        this.name = name;
+        this.birthday = birthday;
+        this.gender = gender;
+        this.identityCard = identityCard;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
     }
 
-    private String address;
+    public Person() {
+    }
 
     public String getId() {
         return id;
@@ -36,6 +38,14 @@ public abstract class Person {
         this.name = name;
     }
 
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
     public String getGender() {
         return gender;
     }
@@ -44,30 +54,40 @@ public abstract class Person {
         this.gender = gender;
     }
 
-    public String getAge() {
-        return age;
+    public String getIdentityCard() {
+        return identityCard;
     }
 
-    public void setAge(String age) {
-        this.age = age;
+    public void setIdentityCard(String identityCard) {
+        this.identityCard = identityCard;
     }
 
-    public String getAddress() {
-        return address;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
-    public Person(String id, String name, String gender, String age, String address) {
-        this.id = id;
-        this.name = name;
-        this.gender = gender;
-        this.age = age;
-        this.address = address;
+    public String getEmail() {
+        return email;
     }
 
-    public Person() {
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", birthday='" + birthday + '\'' +
+                ", gender='" + gender + '\'' +
+                ", identityCard='" + identityCard + '\'' +
+                ", phoneNumber=" + phoneNumber +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

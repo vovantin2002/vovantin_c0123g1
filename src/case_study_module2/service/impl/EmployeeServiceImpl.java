@@ -14,9 +14,9 @@ public class EmployeeServiceImpl implements IEmployeeService {
     public static Scanner sc = new Scanner(System.in);
 
     static {
-        employeeList.add(new Employee("01", "Tin", "nam", "18", "Quang Nam"));
-        employeeList.add(new Employee("02", "Tinn", "nam", "19", "Quang Nam"));
-        employeeList.add(new Employee("03", "Tinnn", "nam", "20", "Quang Nam"));
+        employeeList.add(new Employee("01", "Tin", "09/05/2002", "nam", "92527340", "0778298952", "hjakdncaj@gmail.com","ds","18", "Quang Nam"));
+        employeeList.add(new Employee("02", "tincute", "09/05/2002", "nam", "92527340", "0778298952", "hjakdncaj@gmail.com","dscs","18", "Quang Nam"));
+        employeeList.add(new Employee("03", "vovantin", "09/05/2002", "nam", "92527340", "0778298952", "hjakdncaj@gmail.com","sasds","18", "Quang Nam"));
     }
 
     @Override
@@ -29,20 +29,29 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
     @Override
     public void addEmployee() {
-        System.out.println("Enter id: ");
-        String id;
-        id = sc.nextLine();
-        System.out.println("Enter name: ");
+        System.out.print("Enter id: ");
+       String id = sc.nextLine();
+        System.out.print("Enter name: ");
         String name;
         name = sc.nextLine();
-        System.out.println("Enter gender: ");
-        String gender;
-        gender = sc.nextLine();
-        System.out.println("Enter age: ");
-        String age = sc.nextLine();
-        System.out.println("Enter address: ");
-        String address = sc.nextLine();
-        Employee employee = new Employee(id, name, gender, age, address);
+        System.out.print("Enter birthday: ");
+        String birthday;
+        birthday = sc.nextLine();
+        System.out.print("Enter gender: ");
+        String gender = sc.nextLine();
+        System.out.print("Enter identityCard: ");
+        String identityCard = sc.nextLine();
+        System.out.print("Enter phoneNumber: ");
+        String phoneNumber = sc.nextLine();
+        System.out.print("Enter email: ");
+        String email = sc.nextLine();
+        System.out.print("Enter ability: ");
+        String ability = sc.nextLine();
+        System.out.print("Enter position: ");
+        String position = sc.nextLine();
+        System.out.print("Enter salary: ");
+        String salary = sc.nextLine();
+        Employee employee = new Employee(id, name, birthday, gender, identityCard, phoneNumber, email, ability, position, salary);
         employeeList.add(employee);
         System.out.println("successfully added new!");
     }
@@ -58,13 +67,24 @@ public class EmployeeServiceImpl implements IEmployeeService {
                 System.out.print("Enter name: ");
                 String name;
                 name = sc.nextLine();
+                System.out.print("Enter birthday: ");
+                String birthday;
+                birthday = sc.nextLine();
                 System.out.print("Enter gender: ");
                 String gender = sc.nextLine();
-                System.out.print("Enter age: ");
-                String age = sc.nextLine();
-                System.out.print("Enter address: ");
-                String address = sc.nextLine();
-                Employee employee = new Employee(id, name, gender, age, address);
+                System.out.print("Enter identityCard: ");
+                String identityCard = sc.nextLine();
+                System.out.print("Enter phoneNumber: ");
+                String phoneNumber = sc.nextLine();
+                System.out.print("Enter email: ");
+                String email = sc.nextLine();
+                System.out.print("Enter ability: ");
+                String ability = sc.nextLine();
+                System.out.print("Enter position: ");
+                String position = sc.nextLine();
+                System.out.print("Enter salary: ");
+                String salary = sc.nextLine();
+                Employee employee = new Employee(id, name, birthday, gender, identityCard, phoneNumber, email, ability, position, salary);
                 employeeList.set(i, employee);
                 System.out.println("successful fix");
             }
