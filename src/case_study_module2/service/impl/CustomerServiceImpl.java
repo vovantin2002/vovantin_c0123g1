@@ -9,8 +9,8 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 public class CustomerServiceImpl implements ICustomerService {
-    Scanner sc=new Scanner(System.in);
-    public static  Customer customer = new Customer();
+    Scanner sc = new Scanner(System.in);
+    public static Customer customer = new Customer();
     private static LinkedList<Customer> customers = new LinkedList<>();
 
     static {
@@ -21,52 +21,52 @@ public class CustomerServiceImpl implements ICustomerService {
 
 
     public void add() {
-        System.out.println("Nhap id");
+        System.out.println("Enter id: ");
         String id;
         id = sc.nextLine();
-        System.out.println("Nhap ten");
+        System.out.println("Enter name: ");
         String name;
         name = sc.nextLine();
-        System.out.println("Nhap gioi tinh");
+        System.out.println("Enter gender: ");
         String gender;
         gender = sc.nextLine();
-        System.out.println("Nhap tuoi");
+        System.out.println("Enter age: ");
         String age = sc.nextLine();
-        System.out.println("Nhap dia chi");
+        System.out.println("Enter address: ");
         String address = sc.nextLine();
-        Customer  customer1= new Customer(id, name,gender, age, address);
+        Customer customer1 = new Customer(id, name, gender, age, address);
         customers.add(customer1);
+        System.out.println("successfully added new!");
     }
 
     public void edit() {
-        System.out.println("nhap id muon sua ");
+        System.out.print("enter the id to edit:  ");
         String id = sc.nextLine();
-        for (int i = 0; i <customers.size(); i++) {
+        for (int i = 0; i < customers.size(); i++) {
             if (customers.get(i).getId().equals(id)) {
-                System.out.println("Nhap id");
+                System.out.print("Enter id: ");
                 id = sc.nextLine();
-                System.out.println("Nhap ten");
+                System.out.print("Enter name: ");
                 String name;
                 name = sc.nextLine();
-                System.out.println("Nhap gioi tinh");
+                System.out.print("Enter gender: ");
                 String gender;
                 gender = sc.nextLine();
-                System.out.println("Nhap tuoi");
+                System.out.print("Enter age: ");
                 String age = sc.nextLine();
-                System.out.println("Nhap dia chi");
+                System.out.print("Enter address:");
                 String address = sc.nextLine();
-                Customer  customer2= new Customer(id, name,gender, age, address);
-                customers.set(Integer.parseInt(id),customer2);
-        }
+                Customer customer2 = new Customer(id, name, gender, age, address);
+                customers.set(Integer.parseInt(id), customer2);
             }
         }
-
+    }
 
 
     @Override
     public void display() {
         for (Customer customer : customers) {
-            System.out.println(customer );
+            System.out.println(customer);
         }
     }
 

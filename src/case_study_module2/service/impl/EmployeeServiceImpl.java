@@ -14,9 +14,9 @@ public class EmployeeServiceImpl implements IEmployeeService {
     public static Scanner sc = new Scanner(System.in);
 
     static {
-        employeeList.add(new Employee("01", "Tin","nam", "18", "Quang Nam"));
-        employeeList.add(new Employee("02", "Tinn", "nam","19", "Quang Nam"));
-        employeeList.add(new Employee("03", "Tinnn", "nam","20", "Quang Nam"));
+        employeeList.add(new Employee("01", "Tin", "nam", "18", "Quang Nam"));
+        employeeList.add(new Employee("02", "Tinn", "nam", "19", "Quang Nam"));
+        employeeList.add(new Employee("03", "Tinnn", "nam", "20", "Quang Nam"));
     }
 
     @Override
@@ -27,45 +27,46 @@ public class EmployeeServiceImpl implements IEmployeeService {
     }
 
 
-
     @Override
-    public  void addEmployee() {
-        System.out.println("Nhap id");
+    public void addEmployee() {
+        System.out.println("Enter id: ");
         String id;
         id = sc.nextLine();
-        System.out.println("Nhap ten");
+        System.out.println("Enter name: ");
         String name;
         name = sc.nextLine();
-        System.out.println("Nhap gioi tinh");
+        System.out.println("Enter gender: ");
         String gender;
         gender = sc.nextLine();
-        System.out.println("Nhap tuoi");
+        System.out.println("Enter age: ");
         String age = sc.nextLine();
-        System.out.println("Nhap dia chi");
+        System.out.println("Enter address: ");
         String address = sc.nextLine();
-        Employee employee = new Employee(id, name,gender, age, address);
+        Employee employee = new Employee(id, name, gender, age, address);
         employeeList.add(employee);
+        System.out.println("successfully added new!");
     }
 
     @Override
-    public   void editEmployee() {
-        System.out.println("Nhap id can sua");
+    public void editEmployee() {
+        System.out.print("enter the id to edit: ");
         String id = sc.nextLine();
         for (int i = 0; i < employeeList.size(); i++) {
             if (employeeList.get(i).getId().equals(id)) {
-                System.out.println("Nhap id");
+                System.out.print("Enter id: ");
                 id = sc.nextLine();
-                System.out.println("Nhap ten");
+                System.out.print("Enter name: ");
                 String name;
                 name = sc.nextLine();
-                System.out.println("Nhap ten");
-                String gender= sc.nextLine();
-                System.out.println("Nhap tuoi");
+                System.out.print("Enter gender: ");
+                String gender = sc.nextLine();
+                System.out.print("Enter age: ");
                 String age = sc.nextLine();
-                System.out.println("Nhap dia chi");
+                System.out.print("Enter address: ");
                 String address = sc.nextLine();
-                Employee employee = new Employee(id, name,gender, age, address);
+                Employee employee = new Employee(id, name, gender, age, address);
                 employeeList.set(i, employee);
+                System.out.println("successful fix");
             }
         }
     }

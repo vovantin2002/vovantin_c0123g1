@@ -1,11 +1,34 @@
 package case_study_module2.model.facility;
 
 public class Facility {
+    protected String idService;
     protected String nameService;
-    protected int areaAll;
-    protected int price;
-    protected int numberHumanMax;
+    protected String areaAll;
+    protected String price;
+    protected String numberHumanMax;
     protected String rentalType;
+    protected String age;
+
+    public String getIdService() {
+        return idService;
+    }
+
+    @Override
+    public String toString() {
+        return "Facility{" +
+                "idService='" + idService + '\'' +
+                ", nameService='" + nameService + '\'' +
+                ", areaAll='" + areaAll + '\'' +
+                ", price='" + price + '\'' +
+                ", numberHumanMax='" + numberHumanMax + '\'' +
+                ", rentalType='" + rentalType + '\'' +
+                ", age='" + age + '\'' +
+                '}';
+    }
+
+    public void setIdService(String idService) {
+        this.idService = idService;
+    }
 
     public String getNameService() {
         return nameService;
@@ -15,27 +38,27 @@ public class Facility {
         this.nameService = nameService;
     }
 
-    public int getAreaAll() {
+    public String getAreaAll() {
         return areaAll;
     }
 
-    public void setAreaAll(int areaAll) {
+    public void setAreaAll(String areaAll) {
         this.areaAll = areaAll;
     }
 
-    public int getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
-    public int getNumberHumanMax() {
+    public String getNumberHumanMax() {
         return numberHumanMax;
     }
 
-    public void setNumberHumanMax(int numberHumanMax) {
+    public void setNumberHumanMax(String numberHumanMax) {
         this.numberHumanMax = numberHumanMax;
     }
 
@@ -47,14 +70,24 @@ public class Facility {
         this.rentalType = rentalType;
     }
 
-    public Facility() {
+    public String getAge() {
+        return age;
     }
 
-    public Facility(String nameService, int areaAll, int price, int numberHumanMax, String rentalType) {
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public Facility(String idService, String nameService, String areaAll, String price, String numberHumanMax, String rentalType, String age) {
+        this.idService = idService;
         this.nameService = nameService;
         this.areaAll = areaAll;
         this.price = price;
         this.numberHumanMax = numberHumanMax;
         this.rentalType = rentalType;
+        this.age = age;
+    }
+
+    public Facility() {
     }
 }
