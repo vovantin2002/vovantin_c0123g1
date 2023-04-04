@@ -1,48 +1,130 @@
 package case_study_module2.util.vaidate;
 
+import java.util.Scanner;
+
 public class Check {
-    public static void validateFacilityData(String idService, String nameService, double areaAll, double price, String numberHumanMax, String rentType, int age) throws Exception {
+    static Scanner scanner = new Scanner(System.in);
 
-        // Kiểm tra định dạng của mã dịch vụ
-        if (!idService.matches("^(SV(VL|HO|RO)-[0-9]{4})$")) {
-            throw new Exception("Mã dịch vụ không đúng định dạng!");
-        }
-
-        // Kiểm tra định dạng của tên dịch vụ
-        if (!nameService.matches("^[A-Z][a-z]*([\\s][A-Z][a-z]*)*$")) {
-            throw new Exception("Tên dịch vụ không đúng định dạng!");
-        }
-
-        // Kiểm tra diện tích sử dụng
-        if (areaAll < 30) {
-            throw new Exception("Diện tích không hợp lệ!");
-        }
-
-        // Kiểm tra chi phí thuê
-        if (price <= 0) {
-            throw new Exception("Chi phí thuê không hợp lệ!");
-        }
-
-        // Kiểm tra số lượng người tối đa
-        int maxCapacityInt = Integer.parseInt(numberHumanMax);
-        if (maxCapacityInt <= 0 || maxCapacityInt >= 20) {
-            throw new Exception("Số lượng người tối đa phải >0 và nhỏ hơn <20!");
-        }
-
-
-        // Kiểm tra định dạng của kiểu thuê và tiêu chuẩn phòng
-        if (!rentType.matches("^[A-Z][a-z]*([\\s][A-Z][a-z]*)*$")) {
-            throw new Exception("Kiểu thuê hoặc tiêu chuẩn phòng không đúng định dạng!");
-        }
-
-//         Kiểm tra định dạng của ngày sinh
-//        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-//        Date birthDate = sdf.parse(birthDateString);
-//        Date currentDate = new Date();
-//         age = (int)((currentDate.getTime() - birthDate.getTime()) / (1000 * 60 * 60 * 24 * 365));
-//
-//        if(age < 18 || age > 100) {
-//            throw new Exception("Ngày sinh không hợp lệ!");
-//        }
+    public static String checkBirthday() {
+//        Kiểm tra định dạng của ngày sinh
+        final String REGEX_BIRTHDAY = "(^\\d{2}/\\d{2}/\\d{4}$)";
+        Scanner scanner = new Scanner(System.in);
+        String birth = null;
+        boolean check;
+        do {
+            check = true;
+            System.out.println("Enter birthday: ");
+            birth = scanner.nextLine();
+            check = birth.matches(REGEX_BIRTHDAY);
+        } while (!check);
+        return birth;
     }
+
+    public static int checkPrice() {
+        boolean flag;
+        int price;
+        do {
+            flag = true;
+            System.out.println("Enter price: ");
+            price = Integer.parseInt(scanner.nextLine());
+            if (price > 0) {
+                flag = false;
+            }
+        } while (flag);
+        return price;
+    }
+
+    public static int checkNumberHumanMax() {
+        boolean flag;
+        int numberHumanMax;
+        do {
+            flag = true;
+            System.out.println("Enter numberHumanMax: ");
+            numberHumanMax = Integer.parseInt(scanner.nextLine());
+            if (numberHumanMax > 0 && numberHumanMax < 20) {
+                flag = false;
+
+            }
+        } while (flag);
+        return numberHumanMax;
+    }
+
+    public static int checkFloor() {
+        boolean flag;
+        int floor;
+        do {
+            flag = true;
+            System.out.println("Enter number of level: ");
+            floor = Integer.parseInt(scanner.nextLine());
+            if (floor > 0) {
+                flag = false;
+            }
+        } while (flag);
+        return floor;
+    }
+
+    public static String checkRoomId() {
+        boolean flag;
+        String id;
+
+        do {
+            flag = true;
+            System.out.println("Enter room ID: ");
+            id = scanner.nextLine();
+            flag = id.matches("^(SVRO-[0-9]{4})$");
+        } while (!flag);
+        return id;
+    } public static String checkHouseId() {
+        boolean flag;
+        String id;
+
+        do {
+            flag = true;
+            System.out.println("Enter room ID: ");
+            id = scanner.nextLine();
+            flag = id.matches("^(SVHO-[0-9]{4})$");
+        } while (!flag);
+        return id;
+    }
+
+    public static String checkVillaId() {
+        boolean flag;
+        String id;
+        do {
+            flag = true;
+            System.out.println("Enter villa ID: ");
+            id = scanner.nextLine();
+            flag = id.matches("^(SVVL-[0-9]{4})$");
+        } while (!flag);
+        return id;
+    }
+
+    public static String checkNameService() {
+        boolean check;
+        String nameService;
+
+        do {
+            check = true;
+            System.out.println("Enter service name: ");
+            nameService = scanner.nextLine();
+            check = nameService.matches("^[A-Z][a-z]*([\\s][A-Z][a-z]*)*$");
+        } while (!check);
+        return nameService;
+    }
+
+    public static int checkArea() {
+        boolean check;
+        int areaAll;
+
+        do {
+            check = true;
+            System.out.println("Enter area: ");
+            areaAll = Integer.parseInt(scanner.nextLine());
+            if (areaAll > 30) {
+                check = false;
+            }
+        } while (check);
+        return areaAll;
+    }
+
 }

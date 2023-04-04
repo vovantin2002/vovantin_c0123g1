@@ -50,14 +50,14 @@ public class Villa extends Facility {
         this.numOfLevel = numOfLevel;
     }
 
-    public Villa(String idService, String nameService, String areaAll, String price, String numberHumanMax, String rentalType, String age, String roomStandard, String poolArea, String numOfLevel) {
-        super(idService, nameService, areaAll, price, numberHumanMax, rentalType, age);
+    public Villa(String idService, String nameService, String areaAll, String price, String numberHumanMax, String rentalType, String roomStandard, String poolArea, String numOfLevel) {
+        super(idService, nameService, areaAll, price, numberHumanMax, rentalType);
         this.roomStandard = roomStandard;
         this.poolArea = poolArea;
         this.numOfLevel = numOfLevel;
     }
 
     public String getAll() {
-        return idService + "," + nameService + "," + areaAll + "," + price + "," + numberHumanMax + "," + rentalType + "," + age + "," + roomStandard + "," + poolArea + "," + numOfLevel;
+        return idService + "," + nameService + "," + areaAll + "," + price + "," + numberHumanMax + "," + rentalType + "," + roomStandard + "," + poolArea + "," + numOfLevel;
     }
 }

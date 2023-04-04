@@ -7,7 +7,7 @@ import java.io.*;
 public class Main {
     public static void main(String[] args) {
 
-        try (Reader reader = new FileReader("src\\bai_16\\copyfiletext\\test.txt");
+        try (Reader reader = new FileReader("src\\bai_16\\copy_file_text\\test.txt");
              BufferedReader bufferedReader = new BufferedReader(reader)) {
 
             String line;
@@ -19,7 +19,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        try (Writer writer = new FileWriter("src\\bai_16\\copyfiletext\\text.csv");
+        try (Writer writer = new FileWriter("src\\bai_16\\copy_file_text\\text.txt");
              BufferedWriter bufferedWriter = new BufferedWriter(writer)) {
 
             bufferedWriter.write("vo van tin");

@@ -5,8 +5,8 @@ public class House extends Facility {
     protected String numOfLevel;
 
 
-    public House(String idService, String nameService, String areaAll, String price, String numberHumanMax, String rentalType, String age, String roomStandard, String numOfLevel) {
-        super(idService, nameService, areaAll, price, numberHumanMax, rentalType, age);
+    public House(String idService, String nameService, String areaAll, String price, String numberHumanMax, String rentalType, String roomStandard, String numOfLevel) {
+        super(idService, nameService, areaAll, price, numberHumanMax, rentalType);
         this.roomStandard = roomStandard;
         this.numOfLevel = numOfLevel;
     }
@@ -46,20 +46,8 @@ public class House extends Facility {
     }
 
     public String getAll() {
-        return idService + "," + nameService + "," + areaAll + "," + price + "," + numberHumanMax + "," + rentalType + "," + age + "," + roomStandard + "," + numOfLevel;
+        return idService + "," + nameService + "," + areaAll + "," + price + "," + numberHumanMax + "," + rentalType  + "," + roomStandard + "," + numOfLevel;
     }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//        Villa villa = (Villa) o;
-//        return Objects.equals(serviceId, villa.serviceId);
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(serviceId);
-//    }
-//}
+
 }

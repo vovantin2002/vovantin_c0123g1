@@ -49,4 +49,9 @@ public class Customer extends Person {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    public String getInfoToCsv() {
+
+        return id+","+  name+","+ birthday+","+ gender+","+ identityCard+","+  phoneNumber+","+ email+","+  typeOfCustomer+","+ address;
+    }
 }

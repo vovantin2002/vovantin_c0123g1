@@ -7,8 +7,8 @@ public class Room extends Facility {
         this.freeServiceIncluded = freeServiceIncluded;
     }
 
-    public Room(String idService, String nameService, String areaAll, String price, String numberHumanMax, String rentalType, String age, String freeServiceIncluded) {
-        super(idService, nameService, areaAll, price, numberHumanMax, rentalType, age);
+    public Room(String idService, String nameService, String areaAll, String price, String numberHumanMax, String rentalType, String freeServiceIncluded) {
+        super(idService, nameService, areaAll, price, numberHumanMax, rentalType);
         this.freeServiceIncluded = freeServiceIncluded;
     }
 
@@ -34,6 +34,6 @@ public class Room extends Facility {
 
 
     public String getAll() {
-        return idService + "," + nameService + "," + areaAll + "," + price + "," + numberHumanMax + "," + rentalType + "," + age + "," + freeServiceIncluded;
+        return idService + "," + nameService + "," + areaAll + "," + price + "," + numberHumanMax + "," + rentalType  + "," + freeServiceIncluded;
     }
 }

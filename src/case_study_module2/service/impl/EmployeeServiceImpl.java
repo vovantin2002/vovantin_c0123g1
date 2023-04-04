@@ -2,22 +2,19 @@ package case_study_module2.service.impl;
 
 import case_study_module2.model.person.Employee;
 import case_study_module2.service.IEmployeeService;
+import case_study_module2.util.read_and_write.ReadAndWriteEmployee;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static case_study_module2.util.vaidate.Check.checkBirthday;
+
 public class EmployeeServiceImpl implements IEmployeeService {
     //    IRepositoryEmployee iRepositoryEmployee = new RepositoryEmployee();
-    static List<Employee> employeeList = new ArrayList<>();
-    static Employee employee = new Employee();
+    static List<Employee> employeeList = ReadAndWriteEmployee.readEmployeeFromFile();
+    public static Employee employee = new Employee();
     public static Scanner sc = new Scanner(System.in);
-
-    static {
-        employeeList.add(new Employee("01", "Tin", "09/05/2002", "nam", "92527340", "0778298952", "hjakdncaj@gmail.com","ds","18", "Quang Nam"));
-        employeeList.add(new Employee("02", "tincute", "09/05/2002", "nam", "92527340", "0778298952", "hjakdncaj@gmail.com","dscs","18", "Quang Nam"));
-        employeeList.add(new Employee("03", "vovantin", "09/05/2002", "nam", "92527340", "0778298952", "hjakdncaj@gmail.com","sasds","18", "Quang Nam"));
-    }
 
     @Override
     public void displayEmployee() {
@@ -34,9 +31,8 @@ public class EmployeeServiceImpl implements IEmployeeService {
         System.out.print("Enter name: ");
         String name;
         name = sc.nextLine();
-        System.out.print("Enter birthday: ");
         String birthday;
-        birthday = sc.nextLine();
+        birthday =checkBirthday();
         System.out.print("Enter gender: ");
         String gender = sc.nextLine();
         System.out.print("Enter identityCard: ");
@@ -52,6 +48,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
         System.out.print("Enter salary: ");
         String salary = sc.nextLine();
         Employee employee = new Employee(id, name, birthday, gender, identityCard, phoneNumber, email, ability, position, salary);
+        ReadAndWriteEmployee.writeEmployeeToFile(employee);
         employeeList.add(employee);
         System.out.println("successfully added new!");
     }
@@ -67,9 +64,8 @@ public class EmployeeServiceImpl implements IEmployeeService {
                 System.out.print("Enter name: ");
                 String name;
                 name = sc.nextLine();
-                System.out.print("Enter birthday: ");
                 String birthday;
-                birthday = sc.nextLine();
+                birthday = checkBirthday();
                 System.out.print("Enter gender: ");
                 String gender = sc.nextLine();
                 System.out.print("Enter identityCard: ");
@@ -85,6 +81,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
                 System.out.print("Enter salary: ");
                 String salary = sc.nextLine();
                 Employee employee = new Employee(id, name, birthday, gender, identityCard, phoneNumber, email, ability, position, salary);
+                ReadAndWriteEmployee.writeEmployeeToFile(employee);
                 employeeList.set(i, employee);
                 System.out.println("successful fix");
             }

@@ -2,20 +2,18 @@ package case_study_module2.service.impl;
 
 import case_study_module2.model.person.Customer;
 import case_study_module2.service.ICustomerService;
+import case_study_module2.util.read_and_write.ReadAndWriteCustomer;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
+
+import static case_study_module2.util.vaidate.Check.checkBirthday;
 
 public class CustomerServiceImpl implements ICustomerService {
     Scanner sc = new Scanner(System.in);
     public static Customer customer = new Customer();
-    private static LinkedList<Customer> customers = new LinkedList<>();
-
-    static {
-        // Khởi tạo dữ liệu mẫu
-        customers.add(new Customer("1", "Nguyen Van A", "09/05/2002", "nam", "0932r9", "0982921111", "hjasbc@gmail.com", "Diamond", "HN"));
-        customers.add(new Customer("2", "Nguyen Van B", "09/05/2002", "nam", "0932r9", "0982921111", "hjasbc@gmail.com", "Platinium", "HN"));
-    }
+    private static List<Customer> customers =  ReadAndWriteCustomer.readStudentFromFile();
 
 
     public void add() {
@@ -24,9 +22,8 @@ public class CustomerServiceImpl implements ICustomerService {
         System.out.print("Enter name: ");
         String name;
         name = sc.nextLine();
-        System.out.print("Enter birthday: ");
         String birthday;
-        birthday = sc.nextLine();
+        birthday = checkBirthday();
         System.out.print("Enter gender: ");
         String gender = sc.nextLine();
         System.out.print("Enter identityCard: ");
@@ -41,6 +38,7 @@ public class CustomerServiceImpl implements ICustomerService {
         System.out.println("Enter address: ");
         String address = sc.nextLine();
         Customer customer1 = new Customer(id, name, birthday, gender, identityCard, phoneNumber, email, typeOfCustomer, address);
+        ReadAndWriteCustomer.writeEmployeeToFile(customer1);
         customers.add(customer1);
         System.out.println("successfully added new!");
     }
@@ -55,9 +53,8 @@ public class CustomerServiceImpl implements ICustomerService {
                 System.out.print("Enter name: ");
                 String name;
                 name = sc.nextLine();
-                System.out.print("Enter birthday: ");
                 String birthday;
-                birthday = sc.nextLine();
+                birthday = checkBirthday();
                 System.out.print("Enter gender: ");
                 String gender = sc.nextLine();
                 System.out.print("Enter identityCard: ");
@@ -72,6 +69,7 @@ public class CustomerServiceImpl implements ICustomerService {
                 System.out.println("Enter address: ");
                 String address = sc.nextLine();
                 Customer customer2 = new Customer(id, name, birthday, gender, identityCard, phoneNumber, email, typeOfCustomer, address);
+                ReadAndWriteCustomer.writeEmployeeToFile(customer2);
                 customers.set(Integer.parseInt(id), customer2);
             }
         }

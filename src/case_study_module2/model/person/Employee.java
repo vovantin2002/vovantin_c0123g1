@@ -22,6 +22,8 @@ public class Employee extends Person {
 
     }
 
+
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -60,5 +62,9 @@ public class Employee extends Person {
 
     public void setSalary(String salary) {
         this.salary = salary;
+    }
+
+    public String getInfoToCsv() {
+        return id+","+ name+","+ birthday+","+gender+","+identityCard+","+ phoneNumber+","+email+","+ ability+","+ position+","+ salary;
     }
 }

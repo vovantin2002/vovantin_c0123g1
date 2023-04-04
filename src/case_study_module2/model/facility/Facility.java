@@ -7,7 +7,6 @@ public class Facility {
     protected String price;
     protected String numberHumanMax;
     protected String rentalType;
-    protected String age;
 
     public String getIdService() {
         return idService;
@@ -22,7 +21,6 @@ public class Facility {
                 ", price='" + price + '\'' +
                 ", numberHumanMax='" + numberHumanMax + '\'' +
                 ", rentalType='" + rentalType + '\'' +
-                ", age='" + age + '\'' +
                 '}';
     }
 
@@ -70,22 +68,13 @@ public class Facility {
         this.rentalType = rentalType;
     }
 
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
-    }
-
-    public Facility(String idService, String nameService, String areaAll, String price, String numberHumanMax, String rentalType, String age) {
+    public Facility(String idService, String nameService, String areaAll, String price, String numberHumanMax, String rentalType) {
         this.idService = idService;
         this.nameService = nameService;
         this.areaAll = areaAll;
         this.price = price;
         this.numberHumanMax = numberHumanMax;
         this.rentalType = rentalType;
-        this.age = age;
     }
 
     public Facility() {

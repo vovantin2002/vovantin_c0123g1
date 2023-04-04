@@ -17,9 +17,9 @@ public class FacilityServiceImpl implements IFacilityService {
 
     static {
         facilityMap = new LinkedHashMap<>();
-        facilityMap.put(new Villa("SVVL-0001", "Villa 1", "100", "500", "5", "High", "20", "Free", "2", "1"), 0);
-        facilityMap.put(new House("SVHO-0002", "House 1", "50", "400", "6", "High", "18", "Free", "2"), 0);
-        facilityMap.put(new Room("SVRO-0003", "Room 1", "50", "300", "7", "Normal", "20", "Free"), 0);
+        facilityMap.put(new Villa("SVVL-0001", "Villa 1", "100", "500", "5", "High", "Free", "2", "1"), 0);
+        facilityMap.put(new House("SVHO-0002", "House 1", "50", "400", "6", "High", "Free", "2"), 0);
+        facilityMap.put(new Room("SVRO-0003", "Room 1", "50", "300", "7", "Normal", "Free"), 0);
     }
 
 
