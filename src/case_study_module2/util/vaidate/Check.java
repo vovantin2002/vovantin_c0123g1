@@ -80,7 +80,7 @@ public class Check {
 
         do {
             flag = true;
-            System.out.println("Enter room ID: ");
+            System.out.println("Enter House ID: ");
             id = scanner.nextLine();
             flag = id.matches("^(SVHO-[0-9]{4})$");
         } while (!flag);

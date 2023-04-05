@@ -6,11 +6,7 @@ import case_study_module2.model.facility.Villa;
 import case_study_module2.service.impl.CustomerServiceImpl;
 import case_study_module2.service.impl.EmployeeServiceImpl;
 import case_study_module2.service.impl.FacilityServiceImpl;
-import com.sun.xml.internal.ws.util.StringUtils;
-
-import java.util.InputMismatchException;
 import java.util.Scanner;
-
 import static case_study_module2.util.vaidate.Check.*;
 
 public class FuramaController {

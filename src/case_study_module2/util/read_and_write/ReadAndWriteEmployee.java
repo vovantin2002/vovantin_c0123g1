@@ -1,14 +1,11 @@
 package case_study_module2.util.read_and_write;
 
-import bai_17.models.Product;
 import case_study_module2.model.person.Employee;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
-import static case_study_module2.service.impl.EmployeeServiceImpl.employee;
 
 public class ReadAndWriteEmployee {
 
@@ -39,6 +36,8 @@ public class ReadAndWriteEmployee {
                         strings[3], strings[4], strings[5], strings[6], strings[7], strings[8], strings[9]);
                 employeeList.add(employee1);
             }
+            bufferedReader.close();
+            fileReader.close();
         } catch (IOException e) {
             throw new RuntimeException();
         }

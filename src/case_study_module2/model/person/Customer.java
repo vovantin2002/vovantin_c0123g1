@@ -16,7 +16,6 @@ public class Customer extends Person {
     }
 
     public Customer() {
-
     }
 
     public String getTypeOfCustomer() {

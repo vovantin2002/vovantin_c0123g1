@@ -4,7 +4,6 @@ import case_study_module2.model.person.Customer;
 import case_study_module2.service.ICustomerService;
 import case_study_module2.util.read_and_write.ReadAndWriteCustomer;
 
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,7 +11,6 @@ import static case_study_module2.util.vaidate.Check.checkBirthday;
 
 public class CustomerServiceImpl implements ICustomerService {
     Scanner sc = new Scanner(System.in);
-    public static Customer customer = new Customer();
     private static List<Customer> customers =  ReadAndWriteCustomer.readStudentFromFile();
 
 
@@ -65,7 +63,6 @@ public class CustomerServiceImpl implements ICustomerService {
                 String email = sc.nextLine();
                 System.out.print("Enter typeOfCustomer: ");
                 String typeOfCustomer = sc.nextLine();
-                System.out.print("Enter ability: ");
                 System.out.println("Enter address: ");
                 String address = sc.nextLine();
                 Customer customer2 = new Customer(id, name, birthday, gender, identityCard, phoneNumber, email, typeOfCustomer, address);
