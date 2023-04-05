@@ -1,7 +1,7 @@
 package case_study_module2.model.facility;
 
 public class Room extends Facility {
-    protected String freeServiceIncluded;
+    private String freeServiceIncluded;
 
     public Room(String freeServiceIncluded) {
         this.freeServiceIncluded = freeServiceIncluded;

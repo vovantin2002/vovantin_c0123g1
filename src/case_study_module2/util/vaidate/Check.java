@@ -7,7 +7,7 @@ public class Check {
 
     public static String checkBirthday() {
 //        Kiểm tra định dạng của ngày sinh
-        final String REGEX_BIRTHDAY = "(^\\d{2}/\\d{2}/\\d{4}$)";
+        final String REGEX_BIRTHDAY = "^((0[1-9])|((1|2)[0-9])|3[0-1])/((0[1-9])|1[0-2])/((19((2[4-9])|([3-9][0-9])))|200[0-5])$";
         Scanner scanner = new Scanner(System.in);
         String birth = null;
         boolean check;

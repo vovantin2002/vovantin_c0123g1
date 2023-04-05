@@ -1,9 +1,9 @@
 package case_study_module2.model.facility;
 
 public class Villa extends Facility {
-    protected String roomStandard;
-    protected String poolArea;
-    protected String numOfLevel;
+    private String roomStandard;
+    private String poolArea;
+    private String numOfLevel;
 
     public Villa(String roomStandard, String poolArea, String numOfLevel) {
         this.roomStandard = roomStandard;

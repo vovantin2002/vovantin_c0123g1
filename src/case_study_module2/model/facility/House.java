@@ -1,8 +1,8 @@
 package case_study_module2.model.facility;
 
 public class House extends Facility {
-    protected String roomStandard;
-    protected String numOfLevel;
+    private  String roomStandard;
+    private String numOfLevel;
 
 
     public House(String idService, String nameService, String areaAll, String price, String numberHumanMax, String rentalType, String roomStandard, String numOfLevel) {

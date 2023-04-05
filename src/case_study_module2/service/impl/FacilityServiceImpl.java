@@ -39,7 +39,7 @@ public class FacilityServiceImpl implements IFacilityService {
     public void displayFacilityMaintenance() {
         if (facilityMap != null) {
             for (Facility facility : facilityMap.keySet()) {
-                if (facilityMap.get(facility) >= 0) {
+                if (facilityMap.get(facility) >= 5) {
                     System.out.println(facility);
                 }
             }

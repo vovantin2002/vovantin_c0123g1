@@ -15,7 +15,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
     static List<Employee> employeeList = ReadAndWriteEmployee.readEmployeeFromFile();
     public static Employee employee = new Employee();
     public static Scanner sc = new Scanner(System.in);
-
+    static List<Employee> arrayListEmployee = new ArrayList<>();
     @Override
     public void displayEmployee() {
         for (Employee e : employeeList) {
@@ -55,10 +55,11 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
     @Override
     public void editEmployee() {
+        arrayListEmployee = ReadAndWriteEmployee.readEmployeeFromFile();
         System.out.print("enter the id to edit: ");
         String id = sc.nextLine();
-        for (int i = 0; i < employeeList.size(); i++) {
-            if (employeeList.get(i).getId().equals(id)) {
+        for (int i = 0; i < arrayListEmployee.size(); i++) {
+            if (arrayListEmployee.get(i).getId().equals(id)) {
                 System.out.print("Enter id: ");
                 id = sc.nextLine();
                 System.out.print("Enter name: ");
@@ -81,10 +82,13 @@ public class EmployeeServiceImpl implements IEmployeeService {
                 System.out.print("Enter salary: ");
                 String salary = sc.nextLine();
                 Employee employee = new Employee(id, name, birthday, gender, identityCard, phoneNumber, email, ability, position, salary);
+                arrayListEmployee.set(i, employee);
                 ReadAndWriteEmployee.writeEmployeeToFile(employee);
-                employeeList.set(i, employee);
                 System.out.println("successful fix");
             }
         }
+
+
+
     }
 }
