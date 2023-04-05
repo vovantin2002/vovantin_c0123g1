@@ -14,7 +14,7 @@ public class ReadAndWriteEmployee {
     public static void writeEmployeeToFile(Employee employee) {
         File file = new File(EMPLOYEE_LIST_PATH);
         try {
-            FileWriter fileWriter = new FileWriter(file, false);
+            FileWriter fileWriter = new FileWriter(file, true);
             fileWriter.write(employee.getInfoToCsv());
             fileWriter.write("\n");
             fileWriter.close();
